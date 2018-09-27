@@ -1,10 +1,10 @@
 module ApplicationHelper
 
   def add_artist?
-    if self.artist.present?
-      link_to self.artist.name, artist_path(self.artist)
+    if @song.artist.present?
+      link_to @song.artist.name, artist_path(@song.artist)
     else
-      link_to "Add Artist", edit_song_path(self)
+      link_to "Add Artist", edit_song_path(@song)
     end
   end
 end
